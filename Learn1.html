@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>My Testing</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+	<style>
+		table,th,td
+		{
+			border: 1px solid black;
+			border-collapse: collapse;
+		}
+		.cities
+		{
+			background-color: black;
+			color: white;
+		}
+		.btnON
+		{
+			background-color: green;
+		}
+		.btnOFF
+		{
+			background-color:red;	
+		}
+		#MyHeader
+		{
+			background-color:lightblue;
+			color:black;			
+		}
+	</style>
+  </head>
+  <body
+	<h1>This is heading 1</h1>
+	<p>This is paragraph</p>
+	<a href="http://aqicn.org/map/malaysia/">check Air Pollution Index</a>
+	<br>
+	<p>Will Open In New Tab</p>
+	<a href="http://aqicn.org/map/malaysia/" target="_blank">check Air Pollution Index</a>
+	
+	<form>
+		First Name: <br>
+		<input type="text" name = "firstname"><br>
+		Last Name: <br>
+		<input type= "text" name= "lastname"><br>
+		<input type="submit" value="Submit">
+	</form>
+	<form>
+		First Number:<br>
+		<input type="text" id="first_num" name = "firstNum"><br>
+		Second Number: <br>
+		<input type= "text" id="second_num" name = "secondNum"><br>
+		
+	</form>
+	<button onclick="funcSum()">+</button>
+	<button onclick="funcMinus()">-</button>
+	<h1 id="result"></h1>
+	<table>
+		<tr>
+			<th>First Name</th>
+			<th>Age</th>
+		</tr>
+		<tr>
+			<td>David</td>
+			<td>24</td>
+		</tr>
+		<tr>
+			<td>yw</td>
+			<td>24</td>
+		</tr>
+	<div class="cities">
+		<h2>London</h2>
+		<p>London is the capital of England.</p>
+	</div>
+	
+	<h1 id="MyHeader">My Header</h1>
+	
+	<!-- <Iframe src="http://aqicn.org/map/malaysia/" height = 300 width = "500"></iframe> -->
+	<h1 id="demo"></h1>
+	<h1 id="demo1"></h1>
+	<!-- <button onclick="document.getElementById('demo1').innerHTML = "ON"">Turn ON</button> -->
+	<!-- <button onclick="document.getElementById('demo1').innerHTML = "ON"">Turn ON</button> -->
+	<button class="btnON" onclick="myFunctionON()">Turn ON</button>
+	<button class="btnOFF" onclick="myFunctionOFF()">Turn OFF</button>	
+	
+    <script src="script.js"></script>
+	<script>
+		document.getElementById("demo").innerHTML = "Hello JavaScript!";
+		document.getElementById('demo1').innerHTML = "ON";
+		function myFunctionON()
+		{
+			document.getElementById('demo1').innerHTML="ON 1";
+		}
+
+		function myFunctionOFF()
+		{
+			document.getElementById('demo1').innerHTML="OFF 1";
+		}
+		
+		function funcSum()
+		{
+			var num1 = document.getElementById("first_num").value;
+			var num2 = document.getElementById("second_num").value;
+			document.getElementById("result").innerHTML = Number(num1) + Number(num2);	
+		}
+		
+		function funcMinus()
+		{
+			var num1 = document.getElementById("first_num").value;
+			var num2 = document.getElementById("second_num").value;
+			document.getElementById("result").innerHTML = Number(num1) - Number(num2);	
+		}
+		
+	</script>
+  </body>
+</html>
